@@ -5,6 +5,7 @@ face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade=cv2.CascadeClassifier('haarcascade_eye.xml')
 mouth_cascade=cv2.CascadeClassifier('haarcascade_smile.xml')
 
+
 #이미지 가져오기
 img=cv2.imread('./image/monalisa.jpg')
 
