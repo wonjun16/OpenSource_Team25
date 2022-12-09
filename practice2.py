@@ -30,5 +30,7 @@ for(x, y, w, h) in faces:
 
 #결과 출력
 cv2.imshow('img', img)
+#결과 이미지 파일 출력
+cv2.imwrite('face_cascade.jpg', img)
 key=cv2.waitKey(0)
 cv2.destroyAllWindows()
