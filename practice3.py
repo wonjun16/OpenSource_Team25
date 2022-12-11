@@ -23,7 +23,7 @@ dst_area = cv2.imread('./image/solbay.jpg')
 src_gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 
 #얼굴 인식
-faces = face_cascade.detectMultiScale(src_gray,1.1,4)
+faces = face_cascade.detectMultiScale(src_gray,1.3,5)
 
 
 #얼굴 검출 횟수
@@ -38,7 +38,7 @@ for x, y, w, h in faces:
     face = src[y: y + h, x: x + w]
     face_gray = src_gray[y: y + h, x: x + w]
 
-    #검출된 부분 잘라서 화면에 출력
+    #검출된 부분만 잘라서 한개씩 이미지파일로 저장
     for (x, y, w, h) in faces:
         trim_img=src[y-int(h/4):y+h+int(h/4), x-int(w/4):x+w+int(w/4)]
         cv2.imwrite('./result_file/trim_area/trimed_image'+ str(img_num) + '.jpg', trim_img)
@@ -57,4 +57,3 @@ for x, y, w, h in faces:
 #결과
 cv2.imwrite('./result_file/face_mosaic_area.jpg', dst_area)
 cv2.imwrite('./result_file/face_cascade.jpg', src)
-
