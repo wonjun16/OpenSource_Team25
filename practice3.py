@@ -51,10 +51,7 @@ for x, y, w, h in faces:
         dst_area = mosaic_area(dst_area, ex, ey, ew, eh)
         cv2.rectangle(face, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
 
-        
-    
 
 #결과
 cv2.imwrite('./result_file/face_mosaic_area.jpg', dst_area)
 cv2.imwrite('./result_file/face_cascade.jpg', src)
-

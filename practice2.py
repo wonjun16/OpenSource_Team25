@@ -1,9 +1,9 @@
 import cv2
 
 #haarcascade 불러오기
-face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade=cv2.CascadeClassifier('haarcascade_eye.xml')
-mouth_cascade=cv2.CascadeClassifier('haarcascade_smile.xml')
+face_cascade=cv2.CascadeClassifier('./haarcascade_file/haarcascade_frontalface_default.xml')
+eye_cascade=cv2.CascadeClassifier('./haarcascade_file/haarcascade_eye.xml')
+mouth_cascade=cv2.CascadeClassifier('./haarcascade_file/haarcascade_smile.xml')
 
 
 #이미지 가져오기
