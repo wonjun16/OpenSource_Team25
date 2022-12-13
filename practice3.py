@@ -23,7 +23,7 @@ dst_area = cv2.imread('./image/solbay.jpg')
 src_gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 
 #얼굴 인식
-faces = face_cascade.detectMultiScale(src_gray,1.3,5)
+faces = face_cascade.detectMultiScale(src_gray,1.1,4)
 
 
 #얼굴 검출 횟수
